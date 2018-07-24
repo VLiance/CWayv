@@ -1,0 +1,113 @@
+﻿
+
+% todo-related
+\RequirePackage{fix-cm}
+\documentclass[fontsize=13pt,oneside]{cwayv}
+
+\usepackage{fontspec}
+\usepackage[Latin,Greek]{ucharclasses}
+\newfontfamily\substitutefont{Quivira}
+\usepackage[mathletters]{ucs}
+\usepackage[utf8x]{inputenc}
+
+
+%\DeclareUnicodeCharacter{211D}{\mathbb{R}}
+
+
+%\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{etoolbox}    
+\usepackage{newunicodechar}
+\let\xnewunicodechar\newunicodechar
+\AfterEndPreamble{\let\newunicodechar\xnewunicodechar}
+
+
+\usepackage{fontspec,xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+%\setromanfont[Mapping=tex-text]{Hoefler Text}
+%\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans}
+%\setmonofont[Scale=MatchLowercase]{Andale Mono}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures=TeX]{Cambria Math}
+
+\newfontfamily{\T}[Scale=4.5]{Cambria Math}%Title
+\newfontfamily{\S}[Scale=1.2]{Cambria Math}%SubTitle
+\newfontfamily{\C}[Scale=1.0]{Cambria Math}%In text
+\newfontfamily{\G}[Scale=1.0]{Cambria Math}%Title
+
+%\newfontfamily{\A}[Scale=2.5]{Quivira}
+%\newfontfamily{\H}[Scale=4.5]{Code2000}
+%\newfontfamily{\J}[Scale=1.0]{DFKai-SB}
+%\newfontfamily{\D}[Scale=1.5]{WenQuanYi Micro Hei}
+ 
+
+\usepackage[left=4.7cm, right=2cm, top=2cm, bottom=4.2cm]{geometry}
+\usepackage[draft]{todonotes}
+\reversemarginpar
+
+% title (TODO: move this to class file once it looks good)
+
+\renewcommand{\maketitle}{
+   \begin{titlepage}
+     \setcounter{page}{-1}
+			\begin{center}
+				~\\[7cm]
+				%\includegraphics[scale=1.25]{../assets/logo.pdf}~\\[1cm]
+				%\includegraphics[scale=1.25]{../assets/Wave.jpg}~\\[1cm]
+				{\huge \bfseries {\T C↝ }}\\[1.5cm]
+				{\huge \bfseries {\S C·Wayv Manual}}\\[8cm]
+				{\S V·Liance Foundation}\\
+				\today
+			\end{center}
+   \end{titlepage}
+}
+
+
+\input{tikz}
+
+
+\begin{document}
+
+
+\title{C·Wayv Manual}
+\author{V·Liance Foundation}
+\date{\today}
+\maketitle
+
+
+\clearpage
+\todototoc
+\listoftodos
+\clearpage
+
+\clearpage
+\tableofcontents
+\clearpage
+
+\input{01-introduction.tex}
+
+%\part{Language Reference}
+%\input{02-types.tex}
+%\input{03-type-system.tex}
+%\input{04-class-field.tex}
+%\input{05-expressions.tex}
+%\input{06-language-features.tex}
+
+%\part{Compiler Reference}
+%\input{07-compiler-usage.tex}
+%\input{08-compiler-features.tex}
+%\input{09-macros.tex}
+
+%\part{Standard Library}
+%\input{10-std.tex}
+
+%\part{Miscellaneous}
+%\input{11-haxelib.tex}
+%\input{12-target-details.tex}
+%\input{13-debugging.tex}
+
+\end{document}

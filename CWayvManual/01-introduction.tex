@@ -1,0 +1,62 @@
+﻿\chapter{Introduction}
+\label{introduction}
+\state{NoContent}
+
+\section{ What is C·Wayv?}
+\label{introduction-what-is-C-Wayv}
+
+ C·Wayv consists of a high-level programming language, inspired of Action Script \& Haxe like language, usually symbolized with a "Wave arrow" (C↝) as title or simply with a tilde (C\textasciitilde) \\
+
+
+Based on C++, acting like an overlay, it's possible to mix C\textasciitilde/C++. You can also interact with GLSL and Javascript, in a single file, variables from different languages are inter-accessible.\\
+
+C\textasciitilde\, is strongly typed to have robust code and best performances. Main goal is to easily have a single code-base which compiles to multiple targets.\\
+
+It use the powerful \href{https://github.com/VLiance/Cwc}{Cwc} intelligent compiler, which achieve outstanding performances using highly optimized C++ compiler in backend. 
+
+Also this provide the ability to generate any platform output binary since a multitude of backend toolchain can be selected.
+
+Currently, there is the available \href{https://github.com/VLianceTool}{toolchains} :
+ 
+\begin{center}
+\begin{tabular}{|l | l | l|}
+	\hline
+	Toolchain &  From &  Target \\ \hline
+	\href{https://github.com/VLianceTool/LibRT}{LibRT}  & Windows & Windows, Linux \\
+	libRT(Debian) & Linux & Linux, Windows \\ \hline
+\end{tabular}
+\end{center}
+
+
+Haxe abstracts away many target differences, but sometimes it is important to interact with a target directly, which is the subject of \Fullref{target-details}.
+
+
+\section{Getting Started}
+\label{introduction-getting-started}
+
+The following program in C\textasciitilde\, prints ``Hello World'' after being compiled and run:
+
+\haxe{assets/HelloWorld.cw}
+
+This can be easily tested  by saving the above code to a file named \ic{Main.cw} and invoking the Cwc Compiler \\
+
+\subsection{Required tools}
+\label{required-tools}
+
+Compilation process is greatly simplified, Cwc is the unique tool you need to build your code. 
+
+Grab the last version of \href{https://github.com/VLiance/Cwc/releases}{Cwc compiler}   \\
+
+Unzip archive, and run Cwc \\
+
+\subsection{First use of Cwc}
+\label{use-cwc}
+
+First Cwc ask for:\\
+- Demos: Feel free to learn from example. \\
+See download section\\
+\\
+- Setting the Cwc path to your environement. This is usefull when you need to access to Cwc from anywhere in Command-line\\
+
+
+

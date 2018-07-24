@@ -1,0 +1,1 @@
+latexmk -xelatex CWayvManual.tex
