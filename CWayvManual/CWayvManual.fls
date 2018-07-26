@@ -392,9 +392,6 @@ INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/se-ascii-print.def
 OUTPUT CWayvManual.xdv
 INPUT CWayvManual.tdo
 INPUT CWayvManual.tdo
-OUTPUT CWayvManual.tdo
-INPUT CWayvManual.toc
-INPUT CWayvManual.toc
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/umsa.fd
@@ -407,9 +404,17 @@ INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/umsb.fd
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+OUTPUT CWayvManual.tdo
+INPUT CWayvManual.toc
+INPUT CWayvManual.toc
 OUTPUT CWayvManual.toc
 INPUT 01-introduction.tex
 INPUT 01-introduction.tex
+INPUT assets/HelloWorld.cw
+INPUT assets/HelloWorld.cw
+INPUT assets/HelloWorld.cw
+INPUT 02-types.tex
+INPUT 02-types.tex
 INPUT assets/HelloWorld.cw
 INPUT assets/HelloWorld.cw
 INPUT assets/HelloWorld.cw

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6630 64-bit) (preloaded format=xelatex 2018.5.1)  24 JUL 2018 17:15
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6630 64-bit) (preloaded format=xelatex 2018.5.1)  26 JUL 2018 17:36
 entering extended mode
 **./CWayvManual.tex
 (CWayvManual.tex
@@ -1701,24 +1701,23 @@ File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 [-1
 
 
-] (CWayvManual.tdo)
+] (CWayvManual.tdo
+LaTeX Font Info:    Try loading font information for U+msa on input line 1.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 1.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
 \tf@tdo=\write5
 \openout5 = `CWayvManual.tdo'.
 
  [1
 
 
-] (CWayvManual.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 5.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 5.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+]
+(CWayvManual.toc)
 \tf@toc=\write6
 \openout6 = `CWayvManual.toc'.
 
@@ -1726,8 +1725,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 
-]
-(01-introduction.tex
+] (01-introduction.tex
 Chapter 1.
 
 Underfull \hbox (badness 10000) in paragraph at lines 8--9
@@ -1786,7 +1784,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--60
 
  []
 
-) [4]
+) [4] [5
+
+] (02-types.tex
+Chapter 2.
+
+LaTeX Font Warning: Font shape `TU/CambriaMath(0)/m/it' undefined
+(Font)              using `TU/CambriaMath(0)/m/n' instead on input line 26.
+
+[6
+
+]
+Overfull \hbox (13.04875pt too wide) in paragraph at lines 82--83
+[]\TU/CambriaMath(0)/m/it/10 Can be compared with \TU/lmtt/m/n/10 a.equals(b) \
+TU/CambriaMath(0)/m/it/10 (which is a short for \TU/lmtt/m/n/10 Type.enumEquals
+()\TU/CambriaMath(0)/m/it/10 ). 
+ []
+
+[7]
+
+LaTeX Warning: Reference `expression-if' on page 8 undefined on input line 93.
+
+
+LaTeX Warning: Reference `expression-while' on page 8 undefined on input line 9
+3.
+
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 119.
+(assets/HelloWorld.cw)
+
+LaTeX Warning: Reference `types-function' on page 8 undefined on input line 123
+.
+
+
+LaTeX Warning: Reference `types-function' on page 1 undefined on input line 123
+.
+
+[8]
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 155.
+) [9]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 113.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 113.
  (CWayvManual.aux)
@@ -1802,12 +1839,12 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 113.
  ) 
 Here is how much of TeX's memory you used:
- 41722 strings out of 427836
- 809355 string characters out of 3152480
- 934982 words of memory out of 3000000
- 45103 multiletter control sequences out of 15000+200000
- 549267 words of font info for 55 fonts, out of 3000000 for 9000
+ 41864 strings out of 427836
+ 812285 string characters out of 3152480
+ 951631 words of memory out of 3000000
+ 45238 multiletter control sequences out of 15000+200000
+ 549275 words of font info for 56 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 62i,6n,67p,10435b,989s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,8n,76p,10435b,989s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on CWayvManual.xdv (5 pages, 32384 bytes).
+Output written on CWayvManual.xdv (10 pages, 117716 bytes).

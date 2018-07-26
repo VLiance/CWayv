@@ -6,3 +6,10 @@
 \contentsline {section}{\numberline {1.2}Getting Started}{3}{section.1.2}
 \contentsline {subsection}{\numberline {1.2.1}Required tools}{4}{subsection.1.2.1}
 \contentsline {subsection}{\numberline {1.2.2}First use of Cwc}{4}{subsection.1.2.2}
+\contentsline {part}{I\hspace {1em}Language Reference}{5}{part.1}
+\contentsline {chapter}{\numberline {2}Types}{6}{chapter.2}
+\contentsline {section}{\numberline {2.1}Basic Types}{6}{section.2.1}
+\contentsline {paragraph}{Equality}{7}{section*.3}
+\contentsline {subsection}{\numberline {2.1.1}Bool}{8}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Void}{8}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Nullability}{9}{section.2.2}

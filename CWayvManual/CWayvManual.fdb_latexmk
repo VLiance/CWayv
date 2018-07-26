@@ -1,10 +1,11 @@
 # Fdb version 3
-["xdvipdfmx"] 1532466960 "CWayvManual.xdv" "CWayvManual.pdf" "CWayvManual" 1532466961
-  "CWayvManual.xdv" 1532466960 32384 73f7d5ed2114db2af2d9db3a0eb4228e "xelatex"
+["xdvipdfmx"] 1532640982 "CWayvManual.xdv" "CWayvManual.pdf" "CWayvManual" 1532640982
+  "CWayvManual.xdv" 1532640981 117716 1d757c20ea5290537d7b712aa3381bed "xelatex"
   (generated)
   "CWayvManual.pdf"
-["xelatex"] 1532466958 "CWayvManual.tex" "CWayvManual.xdv" "CWayvManual" 1532466961
+["xelatex"] 1532640979 "CWayvManual.tex" "CWayvManual.xdv" "CWayvManual" 1532640982
   "01-introduction.tex" 1532466942 2359 729ea784f473f9f3318d6641b71c977e ""
+  "02-types.tex" 1532640958 7702 375edae2cf9b892022fdadc71cda7110 ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136793854 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233955448 1004 54797486969f23fa377b128694d548df ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1233955454 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -222,18 +223,18 @@
   "C:/Program Files/MiKTeX 2.9/tex/xelatex/xetexconfig/geometry.cfg" 1169255481 322 f4a6234bc28bf70659404393c15d3854 ""
   "C:/Program Files/MiKTeX 2.9/tex/xelatex/xunicode/xunicode.sty" 1315551046 205722 8027ed7ab2230086d647802c25f3ee42 ""
   "C:/Users/mbanville/AppData/Local/MiKTeX/2.9/miktex/data/le/xetex/xelatex.fmt" 1525189742 15523184 c88c0cf4e7f3f2b0ba4647f3c27e82da ""
-  "CWayvManual.aux" 1532466960 2177 ed7a2905e16994e91f215f4324064830 ""
-  "CWayvManual.out" 1532466960 375 1141e74a25bb341d02b0c4ba8f92ae99 ""
-  "CWayvManual.tdo" 1532466960 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "CWayvManual.tex" 1532439958 2494 9b482c79d5062184c04ba62a8b741379 ""
-  "CWayvManual.toc" 1532466960 488 64a2236cb61fe7a50b00e9a05d9a1316 ""
+  "CWayvManual.aux" 1532640981 5048 2eac2b157a346cb6fcd4bbea16b03be4 ""
+  "CWayvManual.out" 1532640981 720 5ef886b38e04027a2202210e17d2d234 ""
+  "CWayvManual.tdo" 1532640981 202 65811893248293f0b74c819fe123b7ee ""
+  "CWayvManual.tex" 1532612731 2492 1e3a5ff4487f4f6347d8696da51ff73d ""
+  "CWayvManual.toc" 1532640981 958 3ba6e73cc5966e2b8ea5125533f9385e ""
   "assets/HelloWorld.cw" 1532451508 83 66fa21e7a719845b55675fe788b3451f ""
   "cwayv.cls" 1532439800 2668 5c4e06b273017e099130f71830afbe09 ""
   "tikz.tex" 1525809612 1662 dc6d76cb7d25a601c9fbb5212044b958 ""
   (generated)
-  "CWayvManual.tdo"
-  "CWayvManual.toc"
   "CWayvManual.xdv"
-  "CWayvManual.aux"
+  "CWayvManual.toc"
   "CWayvManual.out"
   "CWayvManual.log"
+  "CWayvManual.aux"
+  "CWayvManual.tdo"

@@ -1,0 +1,158 @@
+\chapter{Types}
+\label{types}
+
+The C\textasciitilde\, type system knows seven type groups:
+
+ 
+\begin{center}
+\begin{tabular}{|l | l | l|}
+	\hline
+	Group &  Type &  Prefix \\ \hline
+	Numeric & Int, Float & n \\
+	String & String & s \\
+	Array & Array, QueueArray, Map & a \\
+	Object & Class Object & o \\ 
+	Function & Function & f \\
+	Delegate & Delegate & d \\
+	Postprocessing & Typedef & t \\ \hline
+	
+\end{tabular}
+\end{center}
+
+
+\section{Basic Types}
+\label{types-basic-types}
+
+\emph{Basic types} are \type{Bool}, \type{Float} and \type{Int}. They can easily be identified in the syntax by values such as
+
+\begin{center}
+\begin{tabular}{| l | l | l | l | l |}
+	\hline
+	\multicolumn{5}{|c|}{Arithmetic} \\ \hline
+	Operator & Operation & Operand 1 & Operand 2 & Return \\ \hline
+	\expr{++}& increment & \type{Int} & N/A & \type{Int}\\
+	& & \type{Float} & N/A & \type{Float}\\
+	\expr{--} & decrement & \type{Int} & N/A & \type{Int}\\
+	& & \type{Float} & N/A & \type{Float}\\
+	\expr{+} & addition & \type{Float} & \type{Float} & \type{Float} \\
+	& & \type{Float} & \type{Int} & \type{Float} \\
+	& & \type{Int} & \type{Float} & \type{Float} \\
+	& & \type{Int} & \type{Int} & \type{Int} \\
+	\expr{-} & subtraction & \type{Float} & \type{Float} & \type{Float} \\
+	& & \type{Float} & \type{Int} & \type{Float} \\
+	& & \type{Int} & \type{Float} & \type{Float} \\
+	& & \type{Int} & \type{Int} & \type{Int} \\
+	\expr{*} & multiplication & \type{Float} & \type{Float} & \type{Float} \\
+	& & \type{Float} & \type{Int} & \type{Float} \\
+	& & \type{Int} & \type{Float} & \type{Float} \\
+	& & \type{Int} & \type{Int} & \type{Int} \\	
+	\expr{/} & division & \type{Float} & \type{Float} & \type{Float} \\
+	& & \type{Float} & \type{Int} & \type{Float} \\
+	& & \type{Int} & \type{Float} & \type{Float} \\
+	& & \type{Int} & \type{Int} & \type{Float} \\
+	\expr{\%} & modulo & \type{Float} & \type{Float} & \type{Float} \\
+	& & \type{Float} & \type{Int} & \type{Float} \\
+	& & \type{Int} & \type{Float} & \type{Float} \\
+	& & \type{Int} & \type{Int} & \type{Int} \\	 \hline
+	\multicolumn{5}{|c|}{Comparison} \\ \hline
+	Operator & Operation & Operand 1 & Operand 2 & Return \\ \hline
+	\expr{==} & equal & \type{Float/Int} & \type{Float/Int} & \type{Bool} \\
+	\expr{!=} & not equal & \type{Float/Int} & \type{Float/Int} & \type{Bool} \\
+	\expr{<} & less than & \type{Float/Int} & \type{Float/Int} & \type{Bool} \\
+	\expr{<=} & less than or equal & \type{Float/Int} & \type{Float/Int} & \type{Bool} \\
+	\expr{>} & greater than & \type{Float/Int} & \type{Float/Int} & \type{Bool} \\
+	\expr{>=} & great than or equal & \type{Float/Int} & \type{Float/Int} & \type{Bool} \\ \hline
+	\multicolumn{5}{|c|}{Bitwise} \\ \hline
+	Operator & Operation & Operand 1 & Operand 2 & Return \\ \hline
+	\expr{\textasciitilde} & bitwise negation & \type{Int} & N/A & \type{Int} \\	
+	\expr{\&} & bitwise and & \type{Int} & \type{Int} & \type{Int} \\	
+	\expr{|} & bitwise or & \type{Int} & \type{Int} & \type{Int} \\	
+	\expr{\^} & bitwise xor & \type{Int} & \type{Int} & \type{Int} \\	
+	\expr{<<} & shift left & \type{Int} & \type{Int} & \type{Int} \\
+	\expr{>>} & shift right & \type{Int} & \type{Int} & \type{Int} \\
+	\expr{>>>} & unsigned shift right & \type{Int} & \type{Int} & \type{Int} \\ \hline
+\end{tabular}
+\end{center}
+
+\paragraph{Equality}
+
+\emph{For enums:}
+\begin{description}
+	\item[Enum without parameters] Are always represent the same value, so \expr{MyEnum.A == MyEnum.A}. 
+	\item[Enum with parameters] Can be compared with \expr{a.equals(b)} (which is a short for \expr{Type.enumEquals()}).
+\end{description}
+
+\emph{Dynamic:}
+Comparison involving at least one Dynamic value is unspecifed and platform-specific.
+
+\subsection{Bool}
+\label{types-bool}
+
+\define[Type]{Bool}{define-bool}{Represents a value which can be either \emph{true} or \emph{false}.}
+
+Values of type \type{Bool} are a common occurrence in \emph{conditions} such as \tref{\expr{if}}{expression-if} and \tref{\expr{while}}{expression-while}. The following \emph{operators} accept and return \type{Bool} values:
+
+\begin{itemize}
+	\item \expr{\&\&} (and)
+	\item \expr{||} (or)
+	\item \expr{!} (not)
+\end{itemize}
+
+Haxe guarantees that compound boolean expressions are evaluated from left to right and only as far as necessary at run-time. For instance, an expression like \expr{A \&\& B} will evaluate \expr{A} first and evaluate \expr{B} only if the evaluation of \expr{A} yielded \expr{true}. Likewise, the expressions \expr{A || B} will not evaluate \expr{B} if the evaluation of \expr{A} yielded \expr{true}, because the value of \expr{B} is irrelevant in that case. This is important in cases such as this:
+
+\begin{lstlisting}
+if (object != null && object.field == 1) { }
+\end{lstlisting}
+
+Accessing \expr{object.field} if \expr{object} is \expr{null} would lead to a run-time error, but the check for \expr{object != null} guards against it.
+
+
+
+
+\subsection{Void}
+\label{types-void}
+
+\define[Type]{Void}{define-void}{Void denotes the absence of a type. It is used to express that something (usually a function) has no value.}
+
+\type{Void} is a special case in the type system because it is not actually a type. It is used to express the absence of a type, which applies mostly to function arguments and return types.
+We have already ``seen'' Void in the initial ``Hello World'' example:
+\todo{please review, doubled content}
+
+\haxe{assets/HelloWorld.cw}
+
+The function type will be explored in detail in the section \Fullref{types-function} but a quick preview helps here: The type of the function \expr{main} in the example above is \type{Void->Void}, which reads as ``it has no arguments and returns nothing''.
+Haxe does not allow fields and variables of type \type{Void} and will complain if an attempt at declaring such is made:
+\todo{review please, sounds weird}
+
+\begin{lstlisting}
+// Arguments and variables of type Void are not allowed
+var x:Void;
+\end{lstlisting}
+
+
+
+\section{Nullability}
+\label{types-nullability}
+
+\define{nullable}{define-nullable}{A type in Haxe is considered \emph{nullable} if \expr{null} is a valid value for it.}
+
+It is common for programming languages to have a single, clean definition for nullability. However, Haxe has to find a compromise in this regard due to the nature of Haxe's target languages: While some of them allow and; in fact, default to \expr{null} for anything, others do not even allow \expr{null} for certain types. This necessitates the distinction of two types of target languages:
+
+\define{Static target}{define-static-target}{Static targets employ their own type system where \expr{null} is not a valid value for basic types. This is true for the \target{Flash}, \target{C++}, \target{Java} and \target{C\#} targets.}
+
+\define{Dynamic target}{define-dynamic-target}{Dynamic targets are more lenient with their types and allow \expr{null} values for basic types. This applies to the \target{JavaScript}, \target{PHP}, \target{Neko} and \target{Flash 6-8} targets.}
+
+There is nothing to worry about when working with \expr{null} on dynamic targets; however, static ones may require some thought. For starters, basic types are initialized to their default values.
+\todo{for starters...please review}
+
+\define{Default values}{define-default-value}{
+	Basic types have the following default values on static targets:
+	\begin{description}
+		\item[\type{Int}:] \expr{0}
+		\item[\type{Float}:] \expr{NaN} on \target{Flash}, \expr{0.0} on other static targets
+		\item[\type{Bool}:] \expr{false}
+	\end{description}
+}
+
+As a consequence, the Compiler does not allow the assignment of \expr{null} to a basic type on static targets. In order to achieve this, the basic type has to be wrapped as \type{Null$<$T$>$}:
+

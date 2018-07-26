@@ -1,7 +1,9 @@
 This file is generated, do not edit!
 
 Todo:
-
+2.1.2 - Void: please review, doubled content
+2.1.2 - Void: review please, sounds weird
+2.2 - Nullability: for starters...please review
 
 Missing Content:
 
@@ -11,5 +13,10 @@ Unreviewed:
 1.2 - Getting Started
 1.2.1 - Required tools
 1.2.2 - First use of Cwc
+2 - Types
+2.1 - Basic Types
+2.1.1 - Bool
+2.1.2 - Void
+2.2 - Nullability
 
 Modified:

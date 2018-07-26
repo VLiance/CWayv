@@ -101,18 +101,47 @@ class Main {
 
 		var sectionContent = [];
 
+		var sContent = "";
+		var sFile = "";
+		var bFirst = true;
+		var nLastSection = 0;
+		
 		for (i in 0...sectionInfo.all.length) {
+		
 			var sec = sectionInfo.all[i];
 			sec.content = generateTitleString(sec) + sec.content + "\n";
+			
+			if(sec.parent == null){
+			
+				if(sFile != ""){
+					if (bFirst ){bFirst = false;
+						sContent += '\n\nPrevious section: ${link(sectionInfo.all[nLastSection])}';
+					}
+					nLastSection = i;
+					if (i != sectionInfo.all.length - 1) sContent += '\n\nNext section: ${link(sectionInfo.all[i + 1])}';
+		
+					sys.io.File.saveContent(sFile,sContent);
+				}
+				sContent = "";
+				sFile = '$out/${url(sec)}';
+			}
+			sContent += sec.content;
+				
 			if (config.outputMode == Markdown) {
 			sec.content += "\n---";
 			if (i != 0) sec.content += '\n\nPrevious section: ${link(sectionInfo.all[i - 1])}';
 			if (i != sectionInfo.all.length - 1) sec.content += '\n\nNext section: ${link(sectionInfo.all[i + 1])}';
-			sys.io.File.saveContent('$out/${url(sec)}', sec.content);
+		//	sys.io.File.saveContent('$out/${url(sec)}', sec.content);
 			} else {
 				sectionContent.push(sec.content);
 			}
 		}
+		
+			if(sFile != ""){
+				sys.io.File.saveContent(sFile ,sContent);
+			}
+			
+			
 		generateDictionary();
 		generateTodo();
 

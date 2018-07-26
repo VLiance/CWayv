@@ -1,3 +1,8 @@
+<a id="introduction"></a>
+## 1 Introduction
+
+﻿
+<a id="introduction-what-is-C-Wayv"></a>
 ## 1.1  What is C·Wayv?
 
 C·Wayv consists of a high-level programming language, inspired of Action Script & Haxe like language, usually symbolized with a "Wave arrow" (C↝) as title or simply with a tilde (C~) 
@@ -20,9 +25,40 @@ libRT(Debian)  | Linux  | Linux, Windows
  
 
 Haxe abstracts away many target differences, but sometimes it is important to interact with a target directly, which is the subject of target-details.
+<a id="introduction-getting-started"></a>
+## 1.2 Getting Started
 
----
+The following program in C~, prints "Hello World" after being compiled and run:
 
-Previous section: [Introduction](introduction.md)
+```haxe
+class Main {
+  public function Main():Void {
+    Debug.fTrace("Hello World");
+  }
+}
+```
 
-Next section: [Getting Started](introduction-getting-started.md)
+This can be easily tested  by saving the above code to a file named `Main.cw` and invoking the Cwc Compiler
+<a id="required-tools"></a>
+## 1.2.1 Required tools
+
+Compilation process is greatly simplified, Cwc is the unique tool you need to build your code. 
+
+Grab the last version of [Cwc compiler](https://github.com/VLiance/Cwc/releases)   
+
+Unzip archive, and run Cwc
+<a id="use-cwc"></a>
+## 1.2.2 First use of Cwc
+
+First Cwc ask for:
+
+- Demos: Feel free to learn from example. 
+
+See download section
+
+- Setting the Cwc path to your environement. This is usefull when you need to access to Cwc from anywhere in Command-line
+
+
+Previous section: [Introduction](introduction)
+
+Next section: [Basic Types](types-basic-types)
