@@ -1,5 +1,5 @@
 display.hxml
 -resource envTemplate.tex@tikzTemplate
--cmd neko convert.n -i ../CWayvManual -o ../output/CWayvManual/website/ CWayvManual.tex
--cmd neko convert.n -i ../CWayvManual -o ../output/CWayvManual/ebook/CWayvManual.mobi CWayvManual.tex
+-cmd neko convert.n -i ../CWayvManual -o "../CWayv.wiki/" CWayvManual.tex
+-cmd neko convert.n -i ../CWayvManual -o ../output/ebook/CWayvManual.mobi CWayvManual.tex
 

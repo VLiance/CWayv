@@ -1,4 +1,5 @@
 import LatexParser;
+import haxe.io.Path;
 
 using StringTools;
 using Lambda;
@@ -102,6 +103,7 @@ class Main {
 		var sectionContent = [];
 
 		var sContent = "";
+		var sSideBar = "";
 		var sFile = "";
 		var bFirst = true;
 		var nLastSection = 0;
@@ -131,17 +133,21 @@ class Main {
 			sec.content += "\n---";
 			if (i != 0) sec.content += '\n\nPrevious section: ${link(sectionInfo.all[i - 1])}';
 			if (i != sectionInfo.all.length - 1) sec.content += '\n\nNext section: ${link(sectionInfo.all[i + 1])}';
-		//	sys.io.File.saveContent('$out/${url(sec)}', sec.content);
+			//	sys.io.File.saveContent('$out/${url(sec)}', sec.content);
+		sSideBar +=   ' ${link(sectionInfo.all[i])} \n';
+		
 			} else {
 				sectionContent.push(sec.content);
 			}
 		}
 		
-			if(sFile != ""){
-				sys.io.File.saveContent(sFile ,sContent);
-			}
-			
-			
+		if(sFile != ""){
+			sys.io.File.saveContent(sFile ,sContent);
+		}
+		sys.io.File.saveContent('$out/_Sidebar.md', sSideBar);
+
+		
+		
 		generateDictionary();
 		generateTodo();
 
@@ -152,6 +158,7 @@ class Main {
 		}
 		sections.iter(prepare);
 		sys.io.File.saveContent('$out/sections.txt', haxe.Json.stringify(sections));
+
 
 		switch (config.outputMode) {
 			case EPub | Mobi:
@@ -327,12 +334,26 @@ class Main {
 		if(sys.FileSystem.exists(path)) {
 			if(sys.FileSystem.isDirectory(path)) {
 				for(entry in sys.FileSystem.readDirectory(path))  {
-					unlink( path + "/" + entry );
+					//trace("unlink" + Path.extension(path));
+					if(Path.extension(path) != "git"){
+						unlink( path + "/" + entry );
+					}
 				}
-				sys.FileSystem.deleteDirectory(path);
+				try {
+					sys.FileSystem.deleteDirectory(path);
+				} catch( msg : String ) {
+					trace("Error occurred: " + msg);
+				}
+			
 			}
 			else {
-				sys.FileSystem.deleteFile(path);
+			
+				try {
+					sys.FileSystem.deleteFile(path);
+				} catch( msg : String ) {
+					trace("Error occurred: " + msg);
+				}
+				
 			}
 		}
 	}
