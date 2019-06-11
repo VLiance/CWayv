@@ -1,2 +1,2 @@
 # CWayv
-All about C↝ language!
+All about C~ language!
